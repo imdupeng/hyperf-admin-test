@@ -1,0 +1,14 @@
+[11-Aug-2025 08:36:00 UTC] PHP Fatal error:  Uncaught RuntimeException: Composer detected issues in your platform: Your Composer dependencies require a PHP version ">= 8.2.0". You are running 8.0.30. in /home/wwwroot/default/test/hyperf-skeleton/vendor/composer/platform_check.php:22
+Stack trace:
+#0 /home/wwwroot/default/test/hyperf-skeleton/vendor/composer/autoload_real.php(25): require()
+#1 /home/wwwroot/default/test/hyperf-skeleton/vendor/autoload.php(22): ComposerAutoloaderInit88f2a4d4a4e81dc7d415bcdf39930654::getLoader()
+#2 /home/wwwroot/default/test/hyperf-skeleton/bin/hyperf.php(19): require('...')
+#3 {main}
+  thrown in /home/wwwroot/default/test/hyperf-skeleton/vendor/composer/platform_check.php on line 22
+[11-Aug-2025 08:38:02 UTC] PHP Fatal error:  Uncaught RuntimeException: Composer detected issues in your platform: Your Composer dependencies require a PHP version ">= 8.2.0". You are running 8.0.30. in /home/wwwroot/default/test/hyperf-skeleton/vendor/composer/platform_check.php:22
+Stack trace:
+#0 /home/wwwroot/default/test/hyperf-skeleton/vendor/composer/autoload_real.php(25): require()
+#1 /home/wwwroot/default/test/hyperf-skeleton/vendor/autoload.php(22): ComposerAutoloaderInit88f2a4d4a4e81dc7d415bcdf39930654::getLoader()
+#2 /home/wwwroot/default/test/hyperf-skeleton/bin/hyperf.php(19): require('...')
+#3 {main}
+  thrown in /home/wwwroot/default/test/hyperf-skeleton/vendor/composer/platform_check.php on line 22

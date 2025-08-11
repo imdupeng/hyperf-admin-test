@@ -8,7 +8,7 @@ use App\Controller\AbstractController;
  * */
 class TestController extends AbstractController{
     public function index(){
-        return 'Test Index';
+        return 'Test Index!';
     }
     public function index2(){
         return 'Test Index2-gg1';

@@ -41,10 +41,19 @@ return [
         Constant::OPTION_MAX_REQUEST => 100000,
         Constant::OPTION_SOCKET_BUFFER_SIZE => 2 * 1024 * 1024,
         Constant::OPTION_BUFFER_OUTPUT_SIZE => 2 * 1024 * 1024,
+        // 静态资源
+        'document_root' => BASE_PATH . '/public',
+        'enable_static_handler' => true,
+        // ...
+        'task_worker_num' => 1, // 根据服务器CPU核心数配置
+        'task_enable_coroutine' => false, // 推荐设置为false
     ],
     'callbacks' => [
         Event::ON_WORKER_START => [Hyperf\Framework\Bootstrap\WorkerStartCallback::class, 'onWorkerStart'],
         Event::ON_PIPE_MESSAGE => [Hyperf\Framework\Bootstrap\PipeMessageCallback::class, 'onPipeMessage'],
         Event::ON_WORKER_EXIT => [Hyperf\Framework\Bootstrap\WorkerExitCallback::class, 'onWorkerExit'],
+        // ...
+        Event::ON_TASK => [Hyperf\Framework\Bootstrap\TaskCallback::class, 'onTask'],
+        Event::ON_FINISH => [Hyperf\Framework\Bootstrap\FinishCallback::class, 'onFinish']
     ],
 ];

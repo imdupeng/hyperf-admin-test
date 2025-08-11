@@ -12,11 +12,9 @@ declare(strict_types=1);
 use Hyperf\HttpServer\Router\Router;
 
 Router::addRoute(['GET', 'POST', 'HEAD'], '/', 'App\Controller\IndexController@index');
+Router::get('/test1', 'App\Manage\Controller\TestController@index');
 Router::addGroup('/test/',function (){
-    Router::get('index','App\Controller\UserController@index');
-    Router::post('store','App\Controller\UserController@store');
-    Router::get('update','App\Controller\UserController@update');
-    Router::post('delete','App\Controller\UserController@delete');
+    Router::get('index','App\Manage\Controller\TestController@index2');
 });
 
 Router::get('/favicon.ico', function () {
